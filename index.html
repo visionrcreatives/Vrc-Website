@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== SEO: title & description (what Google shows in search results) ===== -->
+  <title>VisionR Creatives | Marketing Agency - Social Media, Ads, Web & Branding</title>
+  <meta name="description" content="VisionR Creatives is a marketing agency that grows businesses through social media, paid ads, web development and branding. Strategy-led marketing built for real results. Email us today.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="VisionR Creatives">
+  <meta name="theme-color" content="#15211b">
+
+  <!-- Live domain (GoDaddy) -->
+  <link rel="canonical" href="https://visionrcreatives.com/">
+
+  <!-- Browser-tab icon -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <!-- ===== Social sharing previews (Facebook, WhatsApp, LinkedIn) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VisionR Creatives | Marketing Agency">
+  <meta property="og:description" content="Social media, paid ads, web development and branding. Smart marketing that gets results.">
+  <meta property="og:url" content="https://visionrcreatives.com/">
+  <meta property="og:image" content="https://visionrcreatives.com/logo.png">
+  <meta property="og:site_name" content="VisionR Creatives">
+
+  <!-- ===== Twitter/X sharing preview ===== -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="VisionR Creatives | Marketing Agency">
+  <meta name="twitter:description" content="Social media, paid ads, web development and branding. Smart marketing that gets results.">
+  <meta name="twitter:image" content="https://visionrcreatives.com/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Reset & base ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --brand-green: #1e7a52;   /* deep emerald - the single confident accent */
+      --brand-blue: #0f4d35;    /* deep forest - used only to deepen on hover/emphasis */
+      --accent-bright: #5fc58e; /* lighter mint - for accents on dark backgrounds */
+      --ink: #15211b;           /* warm near-black */
+      --text-light: #6b6a60;    /* warm grey */
+      --paper: #fdfdfc;         /* light off-white */
+      --paper-2: #f4f4f1;       /* soft off-white - secondary surfaces / hover */
+      --line: #e9e9e4;          /* light hairline */
+    }
+
+    body {
+      font-family: "League Spartan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background-color: var(--paper);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background-color: var(--brand-green);
+      color: var(--paper);
+    }
+
+    .serif {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    /* ===== Top-left social icons ===== */
+    .top-socials {
+      position: fixed;
+      top: 20px;
+      left: 24px;
+      display: flex;
+      gap: 10px;
+      z-index: 1100;
+    }
+
+    .top-socials a {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--paper);
+      border: 1px solid var(--line);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 3px rgba(21, 33, 27, 0.05);
+      transition: transform 0.3s, border-color 0.3s, background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .top-socials a:hover {
+      transform: translateY(-2px);
+      border-color: var(--brand-green);
+      background-color: #fff;
+    }
+
+    .top-socials svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--brand-green);
+    }
+
+    /* ===== Menu toggle button (MENU text → logo on open) ===== */
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      height: 44px;
+      min-width: 90px;
+      padding: 0 22px;
+      border-radius: 999px;
+      background-color: var(--paper);
+      border: 1px solid var(--line);
+      cursor: pointer;
+      z-index: 1100;
+      box-shadow: 0 1px 3px rgba(21, 33, 27, 0.05);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s, transform 0.3s, padding 0.3s, border-color 0.3s;
+    }
+
+    .menu-toggle:hover {
+      transform: translateY(-2px);
+      border-color: var(--brand-green);
+    }
+
+    .menu-toggle .menu-label {
+      color: var(--brand-green);
+      font-family: "League Spartan", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: opacity 0.25s;
+    }
+
+    .menu-toggle .toggle-logo {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      opacity: 0;
+      transform: scale(0.6);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .menu-toggle.open {
+      background-color: var(--paper);
+      min-width: 44px;
+      padding: 0;
+    }
+
+    .menu-toggle.open .menu-label {
+      opacity: 0;
+    }
+
+    .menu-toggle.open .toggle-logo {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ===== Dropdown box menu (drops down from top-right) ===== */
+    .menu-overlay {
+      position: fixed;
+      top: 80px;
+      right: 24px;
+      width: 360px;
+      max-width: calc(100vw - 48px);
+      background-color: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 24px 60px rgba(21, 33, 27, 0.12);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      padding: 36px 36px 24px;
+      transform: translateY(-20px) scale(0.95);
+      transform-origin: top right;
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+      overflow: hidden;
+    }
+
+    .menu-overlay.open {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .menu-overlay ul {
+      list-style: none;
+      text-align: right;
+    }
+
+    .menu-overlay ul li {
+      margin: 4px 0;
+      overflow: hidden;
+    }
+
+    .menu-overlay ul li a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--ink);
+      font-family: "League Spartan", sans-serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      transition: color 0.3s;
+      opacity: 0;
+    }
+
+    .menu-overlay ul li a:hover {
+      color: var(--brand-green);
+    }
+
+    .menu-overlay .menu-footer {
+      border-top: 1px solid #eee;
+      margin-top: 22px;
+      padding-top: 18px;
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      transition-delay: 0.6s;
+    }
+
+    .menu-overlay.open .menu-footer {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .menu-overlay .menu-footer a {
+      font-family: "League Spartan", sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      transition: color 0.2s;
+    }
+
+    .menu-overlay .menu-footer a:hover {
+      color: var(--brand-green);
+    }
+
+    @keyframes slideFromLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-120%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideFromRight {
+      from {
+        opacity: 0;
+        transform: translateX(120%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .menu-overlay.open ul li:nth-child(1) a {
+      animation: slideFromLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: 0.35s;
+    }
+
+    .menu-overlay.open ul li:nth-child(2) a {
+      animation: slideFromRight 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: 0.5s;
+    }
+
+    .menu-overlay.open ul li:nth-child(3) a {
+      animation: slideFromLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: 0.65s;
+    }
+
+    /* ===== Hero section ===== */
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 20px 60px;
+      background-color: var(--paper);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1500px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Staggered entrance on page load */
+    @keyframes heroIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-tagline {
+      font-family: "League Spartan", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--brand-green);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: heroIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+    }
+
+    .hero h1 {
+      font-family: "League Spartan", sans-serif;
+      font-size: clamp(2.46rem, 11.07vw, 14.77rem);
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -3px;
+      margin-bottom: 0;
+      color: #45c47e;
+      cursor: default;
+      transition: color 0.4s;
+      white-space: nowrap;
+      opacity: 0;
+      animation: heroIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
+    }
+
+    .hero h1 .letter {
+      display: inline-block;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.4s;
+    }
+
+    /* On hover: V, R, C slide left → right in a wave */
+    .hero h1:hover .letter-v {
+      transform: translateX(14px);
+      color: var(--brand-green);
+    }
+
+    .hero h1:hover .letter-r {
+      transform: translateX(14px);
+      color: var(--brand-green);
+      transition-delay: 0.08s;
+    }
+
+    .hero h1:hover .letter-c {
+      transform: translateX(14px);
+      color: var(--brand-green);
+      transition-delay: 0.16s;
+    }
+
+    /* Scroller below title - plain black text, no bar */
+    .title-marquee {
+      width: 100%;
+      overflow: hidden;
+      margin-top: 30px;
+      padding: 4px 0;
+      opacity: 0;
+      animation: heroIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+    }
+
+    .title-marquee-track {
+      display: flex;
+      gap: 50px;
+      white-space: nowrap;
+      width: max-content;
+      animation: scrollLeft 28s linear infinite;
+      font-family: "League Spartan", sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .title-marquee-track span {
+      display: inline-flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .title-marquee-track span::after {
+      content: "✦";
+      color: var(--brand-green);
+    }
+
+
+    @keyframes scrollLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* Scroll hint at the bottom of the hero */
+    /* ===== Rocket towing the brand banner ===== */
+    .rocket-flight {
+      position: absolute;
+      bottom: -140px;
+      left: -460px;
+      display: flex;
+      align-items: center;
+      z-index: 3;
+      pointer-events: none;
+      opacity: 0;
+      animation: rocketFly 14s linear infinite;
+      animation-delay: 1.5s;
+    }
+
+    /* Banner waves like it's being towed through the air */
+    .rocket-banner {
+      background-color: white;
+      border: 2px solid var(--brand-green);
+      border-radius: 8px;
+      padding: 10px 18px 8px;
+      font-family: "League Spartan", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ink);
+      white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      transform-origin: right center;
+      animation: bannerWave 1.6s ease-in-out infinite;
+    }
+
+    @keyframes bannerWave {
+      0%, 100% { transform: rotate(0deg) translateY(0); }
+      25% { transform: rotate(1.8deg) translateY(-2px); }
+      75% { transform: rotate(-1.8deg) translateY(2px); }
+    }
+
+    .banner-string {
+      width: 28px;
+      height: 2px;
+      background-color: #b5b5bd;
+    }
+
+    /* The rocket gently bobs while flying */
+    .rocket-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      animation: rocketBob 1.1s ease-in-out infinite alternate;
+    }
+
+    @keyframes rocketBob {
+      from { transform: translateY(-3px) rotate(-1.5deg); }
+      to { transform: translateY(3px) rotate(1.5deg); }
+    }
+
+    .rocket-svg {
+      width: 96px;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.12));
+    }
+
+    /* Exhaust flame flickers fast */
+    .flame {
+      transform-origin: 36px 32px;
+      animation: flameFlicker 0.16s ease-in-out infinite alternate;
+    }
+
+    @keyframes flameFlicker {
+      from { transform: scaleX(0.7) scaleY(0.88); opacity: 0.8; }
+      to { transform: scaleX(1.3) scaleY(1.06); opacity: 1; }
+    }
+
+    /* Sparkle trail shooting out behind the rocket */
+    .sparkles span {
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--brand-green);
+      opacity: 0;
+      animation: sparkleFly 0.9s linear infinite;
+    }
+
+    .sparkles span:nth-child(2) {
+      background-color: var(--brand-blue);
+      width: 5px;
+      height: 5px;
+      top: 36%;
+      animation-delay: 0.3s;
+    }
+
+    .sparkles span:nth-child(3) {
+      width: 4px;
+      height: 4px;
+      top: 62%;
+      animation-delay: 0.6s;
+    }
+
+    @keyframes sparkleFly {
+      0% { transform: translate(0, -50%) scale(1); opacity: 1; }
+      100% { transform: translate(-52px, -50%) scale(0); opacity: 0; }
+    }
+
+    /* Fly bottom-left → top-right, then rest off-screen before the next pass */
+    @keyframes rocketFly {
+      0% {
+        transform: translate(0, 0) rotate(-29deg);
+        opacity: 1;
+      }
+      55% {
+        transform: translate(calc(100vw + 700px), calc(-100vh - 350px)) rotate(-29deg);
+        opacity: 1;
+      }
+      55.1% {
+        opacity: 0;
+      }
+      100% {
+        transform: translate(0, 0) rotate(-29deg);
+        opacity: 0;
+      }
+    }
+
+    /* ===== Reveal-on-scroll ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(34px);
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== Section base ===== */
+    section {
+      padding: 120px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 18px;
+    }
+
+    .section-label::before {
+      content: "● ";
+      color: var(--brand-green);
+      font-size: 0.6rem;
+      vertical-align: middle;
+    }
+
+    .section-title {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      font-weight: 400;
+      letter-spacing: -1px;
+      line-height: 1.02;
+      margin-bottom: 56px;
+    }
+
+    /* ===== Services - numbered editorial rows ===== */
+    .services-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: 90px 1.2fr 1.6fr 60px;
+      align-items: center;
+      gap: 24px;
+      padding: 42px 8px;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+      color: inherit;
+      transition: background-color 0.35s, padding 0.35s;
+    }
+
+    .service-row:hover {
+      background-color: var(--paper-2);
+      padding-left: 24px;
+      padding-right: 0;
+    }
+
+    .service-num {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-light);
+      letter-spacing: 1px;
+    }
+
+    .service-name {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      line-height: 1;
+      transition: color 0.3s;
+    }
+
+    .service-row:hover .service-name {
+      color: var(--brand-green);
+    }
+
+    .service-desc {
+      font-size: 1.02rem;
+      color: var(--text-light);
+      font-weight: 500;
+      max-width: 480px;
+    }
+
+    .service-arrow {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      justify-self: end;
+      transition: transform 0.35s, color 0.35s;
+    }
+
+    .service-row:hover .service-arrow {
+      transform: translate(6px, -6px);
+      color: var(--brand-green);
+    }
+
+    /* Staggered reveal for rows */
+    .services-list .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .services-list .reveal:nth-child(2) { transition-delay: 0.15s; }
+    .services-list .reveal:nth-child(3) { transition-delay: 0.25s; }
+    .services-list .reveal:nth-child(4) { transition-delay: 0.35s; }
+
+    /* ===== Meet the founder ===== */
+    .founder-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .founder-photo {
+      position: relative;
+      width: 300px;
+      max-width: 100%;
+    }
+
+    .founder-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 16px;
+      display: block;
+      box-shadow: 0 18px 40px rgba(14, 14, 16, 0.14);
+    }
+
+    /* Brand accent bar tucked behind the photo */
+    .founder-photo::before {
+      content: "";
+      position: absolute;
+      inset: 14px -14px -14px 14px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--brand-green), var(--brand-blue));
+      z-index: -1;
+    }
+
+    .founder-text .section-label {
+      margin-bottom: 18px;
+    }
+
+    .founder-name {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .founder-role {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--brand-blue);
+      margin-bottom: 28px;
+    }
+
+    .founder-bio {
+      font-size: 1.12rem;
+      line-height: 1.7;
+      color: var(--text-light);
+      font-weight: 500;
+      max-width: 560px;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+    }
+
+    .founder-bio + .founder-bio {
+      margin-top: 18px;
+    }
+
+    .founder-bio .accent {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    /* ===== About - editorial statement ===== */
+    #about {
+      max-width: 100%;
+      background-color: var(--ink);
+      color: var(--paper);
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .about-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    #about .section-label {
+      color: #9d9c8f;
+    }
+
+    .statement {
+      font-size: clamp(1.7rem, 3.6vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -1px;
+      max-width: 1000px;
+    }
+
+    .statement .hl-green {
+      color: var(--accent-bright);
+    }
+
+    .statement .serif {
+      font-size: 1.06em;
+      color: var(--accent-bright);
+    }
+
+    #about .section-title {
+      margin-bottom: 40px;
+    }
+
+    .about-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 60px;
+      max-width: 900px;
+    }
+
+    .about-col {
+      border-top: 1px solid #2c352e;
+      padding-top: 24px;
+    }
+
+    .about-col h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent-bright);
+      margin-bottom: 10px;
+    }
+
+    .about-col p {
+      font-size: 1.05rem;
+      color: #c2c1b3;
+      font-weight: 400;
+    }
+
+    /* ===== Marquee divider (outlined text) ===== */
+    .divider-marquee {
+      width: 100%;
+      overflow: hidden;
+      padding: 90px 0 70px;
+      background-color: var(--paper);
+    }
+
+    .divider-track {
+      display: flex;
+      gap: 70px;
+      white-space: nowrap;
+      width: max-content;
+      animation: scrollLeft 32s linear infinite;
+      font-family: "League Spartan", sans-serif;
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      font-weight: 900;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--ink);
+    }
+
+    .divider-track span {
+      display: inline-flex;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .divider-track span::after {
+      content: "✦";
+      -webkit-text-stroke: 0;
+      color: var(--brand-green);
+      font-size: 0.5em;
+    }
+
+    /* ===== Contact ===== */
+    #contact {
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    #contact .section-label {
+      text-align: center;
+    }
+
+    .contact-heading {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(2.8rem, 6.2vw, 5.4rem);
+      font-weight: 400;
+      letter-spacing: -1px;
+      line-height: 1.04;
+      margin-bottom: 14px;
+    }
+
+    .contact-heading .serif {
+      text-transform: none;
+      color: var(--brand-green);
+    }
+
+    .contact-sub {
+      font-size: 1.25rem;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-bottom: 54px;
+    }
+
+    .email-link {
+      display: inline-block;
+      position: relative;
+      font-size: clamp(1.3rem, 3.6vw, 3.2rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: var(--ink);
+      text-decoration: none;
+      padding-bottom: 10px;
+      transition: color 0.3s;
+    }
+
+    .email-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--brand-green), var(--brand-blue));
+      border-radius: 2px;
+      transform: scaleX(0.18);
+      transform-origin: left;
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .email-link:hover {
+      color: var(--brand-blue);
+    }
+
+    .email-link:hover::after {
+      transform: scaleX(1);
+    }
+
+    .contact-socials {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-top: 64px;
+    }
+
+    .contact-socials a {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      transition: color 0.2s;
+    }
+
+    .contact-socials a:hover {
+      color: var(--brand-green);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: var(--ink);
+      color: #9d9c8f;
+      padding: 70px 40px 36px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-top img {
+      height: 54px;
+      width: auto;
+    }
+
+    .footer-tagline {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--paper);
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 26px;
+    }
+
+    .footer-nav a {
+      color: #9d9c8f;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-nav a:hover {
+      color: var(--accent-bright);
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 768px) {
+      .top-socials {
+        top: 14px;
+        left: 14px;
+        gap: 8px;
+      }
+
+      .top-socials a {
+        width: 38px;
+        height: 38px;
+      }
+
+      .top-socials svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .menu-toggle {
+        top: 14px;
+        right: 14px;
+        height: 38px;
+        min-width: 78px;
+        padding: 0 18px;
+      }
+
+      .menu-toggle .menu-label {
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+      }
+
+      .menu-toggle.open {
+        min-width: 38px;
+      }
+
+      .menu-toggle .toggle-logo {
+        width: 26px;
+        height: 26px;
+      }
+
+      .menu-overlay {
+        top: 70px;
+        right: 14px;
+        width: calc(100vw - 28px);
+        padding: 28px 28px 20px;
+      }
+
+      .menu-overlay ul li a {
+        font-size: 2rem;
+      }
+
+      .hero h1 {
+        font-size: 10.2vw;
+        letter-spacing: -2px;
+      }
+
+      .hero h1:hover .letter-v,
+      .hero h1:hover .letter-r,
+      .hero h1:hover .letter-c {
+        transform: translateX(8px);
+      }
+
+      .hero-tagline {
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+      }
+
+      .title-marquee-track {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        gap: 30px;
+      }
+
+      .title-marquee {
+        margin-top: 24px;
+        padding: 10px 0;
+      }
+
+      .rocket-svg {
+        width: 64px;
+      }
+
+      .rocket-banner {
+        font-size: 0.7rem;
+        padding: 8px 12px 6px;
+        letter-spacing: 1px;
+      }
+
+      .banner-string {
+        width: 18px;
+      }
+
+      section {
+        padding: 70px 22px;
+      }
+
+      .service-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 30px 4px;
+      }
+
+      .service-arrow {
+        display: none;
+      }
+
+      .service-desc {
+        max-width: 100%;
+      }
+
+      .about-inner {
+        padding: 0 22px;
+      }
+
+      .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .founder-photo {
+        max-width: 360px;
+        margin: 0 auto;
+      }
+
+      .about-cols {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 44px;
+      }
+
+      .divider-marquee {
+        padding: 50px 0 40px;
+      }
+
+      .contact-heading {
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+      }
+
+      .email-link {
+        font-size: 1.2rem;
+        letter-spacing: 0;
+      }
+
+      .contact-socials {
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      footer {
+        padding: 50px 22px 30px;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+    }
+
+    /* ===== Skip link (keyboard / screen-reader users) ===== */
+    .skip-link {
+      position: absolute;
+      left: 50%;
+      top: 8px;
+      transform: translate(-50%, -130%);
+      background-color: var(--ink);
+      color: var(--paper);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-decoration: none;
+      z-index: 1200;
+      transition: transform 0.2s ease;
+    }
+
+    .skip-link:focus {
+      transform: translate(-50%, 0);
+    }
+
+    /* ===== Visible keyboard focus everywhere ===== */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--brand-blue);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ===== Hero call-to-action ===== */
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 38px;
+      opacity: 0;
+      animation: heroIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.85s forwards;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      font-family: "League Spartan", sans-serif;
+      font-size: 0.92rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1.5px solid var(--ink);
+      transition: transform 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-primary {
+      background-color: var(--ink);
+      color: var(--paper);
+      box-shadow: 0 6px 20px rgba(21, 33, 27, 0.16);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--brand-green);
+      border-color: var(--brand-green);
+      transform: translateY(-3px);
+    }
+
+    .btn-ghost {
+      background-color: transparent;
+      color: var(--ink);
+    }
+
+    .btn-ghost:hover {
+      background-color: var(--ink);
+      color: var(--paper);
+      transform: translateY(-3px);
+    }
+
+    .btn .btn-arrow {
+      transition: transform 0.3s;
+    }
+
+    .btn:hover .btn-arrow {
+      transform: translate(3px, -3px);
+    }
+
+    /* ===== Process - how we work (a genuine sequence, so numbering earns its place) ===== */
+    .process-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      counter-reset: step;
+    }
+
+    .process-step {
+      border-top: 2px solid var(--ink);
+      padding-top: 22px;
+    }
+
+    .process-step .step-num {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--brand-green);
+      margin-bottom: 14px;
+    }
+
+    .process-step h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .process-step p {
+      font-size: 0.98rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .process-list .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .process-list .reveal:nth-child(2) { transition-delay: 0.15s; }
+    .process-list .reveal:nth-child(3) { transition-delay: 0.25s; }
+    .process-list .reveal:nth-child(4) { transition-delay: 0.35s; }
+
+    /* Fourth menu item should animate in like the others */
+    .menu-overlay.open ul li:nth-child(4) a {
+      animation: slideFromRight 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: 0.8s;
+    }
+
+    .menu-overlay.open ul li:nth-child(5) a {
+      animation: slideFromLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: 0.95s;
+    }
+
+    /* ===== Progressive enhancement: if JS never runs, never hide content ===== */
+    html:not(.js) .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ===== Pause the marquees when a visitor is reading them ===== */
+    .title-marquee-track:hover,
+    .divider-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* ===== Respect users who ask for less motion ===== */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+
+      .reveal { opacity: 1; transform: none; }
+      .hero-tagline, .hero h1, .title-marquee, .hero-cta { opacity: 1; }
+      .rocket-flight { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .hero-cta {
+        margin-top: 28px;
+        width: 100%;
+      }
+
+      .btn {
+        flex: 1 1 auto;
+        justify-content: center;
+        padding: 14px 22px;
+      }
+
+      .process-list {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .process-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== Hero: outcome subheadline + trust chips ===== */
+    .hero-sub {
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(1.4rem, 3vw, 2.3rem);
+      line-height: 1.32;
+      color: var(--text-light);
+      max-width: 740px;
+      margin: 26px auto 0;
+      opacity: 0;
+      animation: heroIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.55s forwards;
+    }
+
+    .hero-sub .accent {
+      color: var(--brand-green);
+      font-style: italic;
+    }
+
+    .hero-cta {
+      animation-delay: 0.95s;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 28px;
+      opacity: 0;
+      animation: heroIn 1s cubic-bezier(0.22, 1, 0.36, 1) 1.1s forwards;
+    }
+
+    .hero-chips span {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink);
+      background-color: var(--paper-2);
+      border: 1px solid var(--line);
+      padding: 9px 17px;
+      border-radius: 999px;
+    }
+
+    .hero-chips span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--brand-green);
+    }
+
+    /* ===== Results / proof ===== */
+    .proof-intro {
+      font-size: 1.18rem;
+      line-height: 1.6;
+      color: var(--text-light);
+      font-weight: 500;
+      max-width: 760px;
+      margin-bottom: 44px;
+    }
+
+    .metrics-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .metric {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      padding: 15px 24px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background-color: var(--paper);
+      font-size: 1.02rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: var(--ink);
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .metric:hover {
+      transform: translateY(-3px);
+      border-color: var(--brand-green);
+    }
+
+    .metric .arrow {
+      color: var(--brand-green);
+      font-weight: 900;
+    }
+
+    /* ===== Approach - dark band with metric tiles ===== */
+    #approach {
+      max-width: 100%;
+      background-color: var(--ink);
+      color: var(--paper);
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .approach-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    #approach .section-label { color: #9d9c8f; }
+    #approach .section-title { color: var(--paper); margin-bottom: 26px; }
+
+    .approach-lead {
+      font-size: clamp(1.35rem, 2.8vw, 2.1rem);
+      font-weight: 600;
+      line-height: 1.36;
+      letter-spacing: -0.5px;
+      max-width: 960px;
+      color: #d8d7cd;
+      margin-bottom: 64px;
+    }
+
+    .approach-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    .approach-metric {
+      border-top: 2px solid #2c3a31;
+      padding-top: 22px;
+    }
+
+    .am-num {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-size: clamp(2.3rem, 4.5vw, 3.3rem);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+      color: var(--accent-bright);
+      margin-bottom: 14px;
+    }
+
+    .am-arrow { font-size: 1.3rem; font-weight: 800; }
+
+    .am-label {
+      display: block;
+      font-size: 0.98rem;
+      color: #b4b3a8;
+      font-weight: 500;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 900px) {
+      .approach-metrics { grid-template-columns: repeat(2, 1fr); gap: 34px; }
+    }
+
+    @media (max-width: 560px) {
+      .approach-metrics { grid-template-columns: 1fr; }
+      .approach-inner { padding: 0 22px; }
+    }
+
+    /* ===== About: three differentiators ===== */
+    .about-cols {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      max-width: 1000px;
+    }
+
+    /* ===== Contact: bold full-bleed closing band ===== */
+    #contact {
+      max-width: 100%;
+      background: linear-gradient(165deg, #14402c 0%, #0c2419 100%);
+      color: var(--paper);
+      text-align: center;
+      padding: 130px 0;
+    }
+
+    .contact-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    #contact .section-label {
+      color: var(--accent-bright);
+      text-align: center;
+    }
+
+    #contact .section-label::before {
+      color: var(--accent-bright);
+    }
+
+    #contact .contact-heading {
+      color: var(--paper);
+    }
+
+    #contact .contact-heading .serif {
+      color: var(--accent-bright);
+    }
+
+    #contact .contact-sub {
+      color: #c7d4cc;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #contact .email-link {
+      color: var(--paper);
+    }
+
+    #contact .email-link:hover {
+      color: var(--accent-bright);
+    }
+
+    #contact .email-link::after {
+      background: linear-gradient(90deg, var(--accent-bright), var(--brand-green));
+    }
+
+    .contact-actions {
+      margin-top: 40px;
+    }
+
+    .btn-light {
+      background-color: var(--paper);
+      color: var(--ink);
+      border-color: var(--paper);
+    }
+
+    .btn-light:hover {
+      background-color: var(--accent-bright);
+      border-color: var(--accent-bright);
+      color: var(--ink);
+      transform: translateY(-3px);
+    }
+
+    #contact .contact-socials a {
+      color: #c7d4cc;
+    }
+
+    #contact .contact-socials a:hover {
+      color: var(--accent-bright);
+    }
+
+    @media (max-width: 768px) {
+      .about-cols {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 44px;
+      }
+
+      #contact {
+        padding: 80px 0;
+      }
+
+      .contact-inner {
+        padding: 0 22px;
+      }
+    }
+  </style>
+
+  <!-- ===== Structured data: tells Google this is a business, what it offers, and how to contact it ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "VisionR Creatives",
+    "slogan": "Market Your Worth",
+    "description": "Marketing agency offering social media management, paid ads, web development and branding.",
+    "email": "visionrcreatives@gmail.com",
+    "url": "https://visionrcreatives.com/",
+    "logo": "https://visionrcreatives.com/logo.png",
+    "image": "https://visionrcreatives.com/logo.png",
+    "priceRange": "$$",
+    "founder": {
+      "@type": "Person",
+      "name": "Girish S Goenka"
+    },
+    "sameAs": [
+      "https://www.instagram.com/visionrcreatives/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Marketing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Social Media Management" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Paid Ads" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Web Development" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Branding" }
+        }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- Top-left social icons -->
+  <div class="top-socials">
+    <a href="https://www.instagram.com/visionrcreatives/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.71 3.71 0 0 1-1.38-.9c-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.73 1.46 1.38 2.13a5.86 5.86 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/>
+        <path d="M12 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+        <circle cx="18.41" cy="5.59" r="1.44"/>
+      </svg>
+    </a>
+    <a href="#" target="_blank" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Menu toggle (MENU text → logo when open) -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menuOverlay">
+    <span class="menu-label">Menu</span>
+    <img class="toggle-logo" src="data:image/png;base64,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" alt="Close menu">
+  </button>
+
+  <!-- Dropdown box menu -->
+  <div class="menu-overlay" id="menuOverlay">
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#home" class="menu-link">Home</a></li>
+        <li><a href="#services" class="menu-link">Services</a></li>
+        <li><a href="#approach" class="menu-link">Approach</a></li>
+        <li><a href="#about" class="menu-link">About</a></li>
+        <li><a href="#contact" class="menu-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-footer">
+      <a href="https://www.instagram.com/visionrcreatives/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="#" target="_blank">LinkedIn ↗</a>
+    </div>
+  </div>
+
+  <main>
+
+  <!-- Hero section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-tagline">Market Your Worth</div>
+      <h1>
+        <span class="letter letter-v">V</span><span class="letter">i</span><span class="letter">s</span><span class="letter">i</span><span class="letter">o</span><span class="letter">n</span><span class="letter letter-r">R</span>&nbsp;<span class="letter letter-c">C</span><span class="letter">r</span><span class="letter">e</span><span class="letter">a</span><span class="letter">t</span><span class="letter">i</span><span class="letter">v</span><span class="letter">e</span><span class="letter">s</span>
+      </h1>
+
+      <p class="hero-sub">You built something worth choosing. We make the right people <span class="accent">see it, trust it, and buy it.</span></p>
+
+      <!-- Plain scrolling text below title (no bar) -->
+      <div class="title-marquee">
+        <div class="title-marquee-track">
+          <span>Ads</span>
+          <span>Social Media</span>
+          <span>Website</span>
+          <span>Branding</span>
+          <span>Ads</span>
+          <span>Social Media</span>
+          <span>Website</span>
+          <span>Branding</span>
+        </div>
+      </div>
+
+      <div class="hero-chips">
+        <span>Strategy first</span>
+        <span>Built for results</span>
+        <span>Clear reporting</span>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Grow my business <span class="btn-arrow">↗</span></a>
+        <a href="#services" class="btn btn-ghost">See what we do</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Services section - numbered editorial rows -->
+  <section id="services">
+    <div class="section-label reveal">Services</div>
+    <h2 class="section-title reveal">What we do</h2>
+
+    <div class="services-list">
+      <a href="#contact" class="service-row reveal">
+        <span class="service-num">01</span>
+        <span class="service-name">Social Media</span>
+        <span class="service-desc">We run your channels with content people actually stop for, so your brand stays top of mind and your audience keeps growing.</span>
+        <span class="service-arrow">↗</span>
+      </a>
+
+      <a href="#contact" class="service-row reveal">
+        <span class="service-num">02</span>
+        <span class="service-name">Paid Ads</span>
+        <span class="service-desc">Campaigns on Meta and Google built around one goal: paying customers, not vanity clicks. Every click accounted for, every result reported.</span>
+        <span class="service-arrow">↗</span>
+      </a>
+
+      <a href="#contact" class="service-row reveal">
+        <span class="service-num">03</span>
+        <span class="service-name">Web Development</span>
+        <span class="service-desc">Fast, sharp websites designed to turn visitors into buyers, and to look effortless on every screen.</span>
+        <span class="service-arrow">↗</span>
+      </a>
+
+      <a href="#contact" class="service-row reveal">
+        <span class="service-num">04</span>
+        <span class="service-name">Branding</span>
+        <span class="service-desc">A logo, identity and voice that make you impossible to forget and easy to choose.</span>
+        <span class="service-arrow">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Meet the founder section -->
+  <section id="founder">
+    <div class="founder-grid">
+      <div class="founder-photo reveal">
+        <img src="girish.JPG" alt="Girish S Goenka, Founder of VisionR Creatives" loading="lazy">
+      </div>
+      <div class="founder-text">
+        <div class="section-label reveal">Meet Your Creative Strategist</div>
+        <h2 class="founder-name reveal">Girish S Goenka</h2>
+        <p class="founder-bio reveal">Girish has built and run his own businesses from the ground up. He's also got an MBA in Marketing, corporate experience, and an Executive Program in Digital Marketing from <span class="accent">IIM Indore</span> behind him.</p>
+        <p class="founder-bio reveal">But the difference with Girish is simple: he's done the work himself, so his instincts are the real thing &mdash; and he's got the strategy to turn them into results.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach section - the metrics that matter (dark band) -->
+  <section id="approach">
+    <div class="approach-inner">
+      <div class="section-label reveal">The approach</div>
+      <h2 class="section-title reveal">We move the metrics that actually matter.</h2>
+      <p class="approach-lead reveal">Likes and follower counts don't pay the bills. We focus on the numbers that grow a business, and we report on every single one. No vanity metrics, no smoke.</p>
+
+      <div class="approach-metrics">
+        <div class="approach-metric reveal">
+          <span class="am-num">ROAS</span>
+          <span class="am-label">Return on ad spend we work to push up, campaign after campaign.</span>
+        </div>
+        <div class="approach-metric reveal">
+          <span class="am-num">Leads <span class="am-arrow">↗</span></span>
+          <span class="am-label">Qualified enquiries from people who are ready to buy.</span>
+        </div>
+        <div class="approach-metric reveal">
+          <span class="am-num">CVR <span class="am-arrow">↗</span></span>
+          <span class="am-label">Conversion rate — turning attention into actual sales.</span>
+        </div>
+        <div class="approach-metric reveal">
+          <span class="am-num">Reach <span class="am-arrow">↗</span></span>
+          <span class="am-label">Audience growth that compounds month over month.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process section - a real four-step sequence -->
+  <section id="process">
+    <div class="section-label reveal">How we work</div>
+    <h2 class="section-title reveal">Four steps, no guesswork</h2>
+
+    <div class="process-list">
+      <div class="process-step reveal">
+        <span class="step-num">Step 01</span>
+        <h3>Listen</h3>
+        <p>We learn your business, your customers and what winning actually looks like for you.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="step-num">Step 02</span>
+        <h3>Plan</h3>
+        <p>A clear strategy with priorities and targets, so every hour and every budget has a job.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="step-num">Step 03</span>
+        <h3>Build</h3>
+        <p>Content, ads, sites and identity, shipped fast and made to match how your brand sounds.</p>
+      </div>
+      <div class="process-step reveal">
+        <span class="step-num">Step 04</span>
+        <h3>Grow</h3>
+        <p>We track what works, cut what does not, and double down on the numbers that move.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About section - editorial statement -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="section-label reveal">About Us</div>
+      <h2 class="section-title reveal">Who we are</h2>
+      <p class="statement reveal">
+        We're VisionR Creatives, a marketing studio built on one belief:
+        the best businesses don't always win. The <span class="serif">best known</span> ones do.
+        Our job is to make sure the world sees <span class="hl-green">your worth,</span> and chooses you for it.
+      </p>
+
+      <div class="about-cols">
+        <div class="about-col reveal">
+          <h3>A partner, not a vendor</h3>
+          <p>We treat your growth like it's our own. You get a team invested in the outcome, not just the deliverable.</p>
+        </div>
+        <div class="about-col reveal">
+          <h3>Strategy before tactics</h3>
+          <p>Every post, ad and page starts with a plan built around your goals, so nothing runs on guesswork.</p>
+        </div>
+        <div class="about-col reveal">
+          <h3>Honest reporting</h3>
+          <p>You always know what is working, what we are changing, and exactly where your budget goes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outlined marquee divider -->
+  <div class="divider-marquee">
+    <div class="divider-track">
+      <span>Let's work together</span>
+      <span>Market your worth</span>
+      <span>Let's work together</span>
+      <span>Market your worth</span>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="section-label reveal">Let's talk</div>
+      <h2 class="contact-heading reveal">Ready to grow<br><span class="serif">your business?</span></h2>
+      <p class="contact-sub reveal">Tell us where you want to be a year from now. We'll show you how to get there. One email is all it takes to start.</p>
+
+      <div class="reveal">
+        <a href="mailto:visionrcreatives@gmail.com" class="email-link">visionrcreatives@gmail.com</a>
+      </div>
+
+      <div class="contact-actions reveal">
+        <a href="mailto:visionrcreatives@gmail.com?subject=Let's%20grow%20my%20business" class="btn btn-light">Email us <span class="btn-arrow">↗</span></a>
+      </div>
+
+      <div class="contact-socials reveal">
+        <a href="https://www.instagram.com/visionrcreatives/" target="_blank" rel="noopener">Instagram ↗</a>
+        <a href="#" target="_blank">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <img src="data:image/png;base64,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" alt="VisionR Creatives logo" loading="lazy">
+        <div class="footer-tagline">Market your worth.</div>
+        <div class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#approach">Approach</a>
+          <a href="#process">Process</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mark that JS is running, so CSS can safely hide-then-reveal scroll content.
+    document.documentElement.classList.add("js");
+
+    // ===== Menu open/close =====
+    const menuToggle = document.getElementById("menuToggle");
+    const menuOverlay = document.getElementById("menuOverlay");
+    const menuLinks = document.querySelectorAll(".menu-link");
+
+    function setMenu(open) {
+      menuToggle.classList.toggle("open", open);
+      menuOverlay.classList.toggle("open", open);
+      menuToggle.setAttribute("aria-expanded", String(open));
+      menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+
+    menuToggle.addEventListener("click", () => {
+      setMenu(!menuOverlay.classList.contains("open"));
+    });
+
+    menuLinks.forEach(link => {
+      link.addEventListener("click", () => setMenu(false));
+    });
+
+    // Close on Escape.
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && menuOverlay.classList.contains("open")) {
+        setMenu(false);
+        menuToggle.focus();
+      }
+    });
+
+    // Close when clicking anywhere outside the menu or its button.
+    document.addEventListener("click", (e) => {
+      if (
+        menuOverlay.classList.contains("open") &&
+        !menuOverlay.contains(e.target) &&
+        !menuToggle.contains(e.target)
+      ) {
+        setMenu(false);
+      }
+    });
+
+    // ===== Reveal sections as they scroll into view =====
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      // No animation: just show everything.
+      document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+    }
+  </script>
+
+</body>
+</html>
